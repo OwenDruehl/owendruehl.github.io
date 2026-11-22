@@ -131,7 +131,7 @@
     if(['work','reading','music'].indexOf(h)<0)h='home';
     document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('on',p.id===h)});
     document.querySelectorAll('[data-nav]').forEach(function(a){a.classList.toggle('cur',a.dataset.nav===h)});
-    document.title=(h==='home'?'':h.charAt(0).toUpperCase()+h.slice(1)+' - ')+'Your Name';
+    document.title=(h==='home'?'':h.charAt(0).toUpperCase()+h.slice(1)+' - ')+'Owen Druehl';
     if(h==='home'&&window.__shipResize)window.__shipResize();
     window.scrollTo(0,0);
   }
