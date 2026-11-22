@@ -16,6 +16,11 @@
   a{color:#000;text-decoration:underline}
   a:hover{background:#000;color:#fff}
   .menu{margin:0 0 26px}
+  .menu a.cur{text-decoration:none;font-style:italic;pointer-events:none}
+  .page{display:none}.page.on{display:block}
+  h2{font-size:24px;font-weight:normal;margin:26px 0 12px}
+  h3{font-size:18px;font-weight:bold;margin:22px 0 6px}
+  ul{margin:0 0 18px;padding-left:22px}li{margin:0 0 6px}
   h1{font-size:34px;font-weight:normal;margin:0 0 4px;line-height:1.15}
   h1 a{text-decoration:none}
   h1 a:hover{background:none;color:#000}
@@ -35,27 +40,31 @@
 </head>
 <body>
 
-<div class="menu">Menu<br><a href="/">Home</a></div>
+<div class="menu">Menu<br>
+  <a href="#" data-nav="home">Home</a><br>
+  <a href="#work" data-nav="work">Work</a><br>
+  <a href="#reading" data-nav="reading">Reading</a><br>
+  <a href="#music" data-nav="music">Music</a>
+</div>
 
-<h1><a href="/">Owen Druehl</a></h1>
-<a href="/">Home</a>
+<h1><a href="#">Owen Druehl</a></h1>
 
-<div id="ship" aria-label="A rocket drawn in text characters. Drag to rotate it."></div>
-<p class="cap">(drag to turn it around)</p>
+<!-- ============ HOME ============ -->
+<section id="home" class="page on">
+  <div id="ship" aria-label="A rocket drawn in text characters. Drag to rotate it."></div>
+  <p class="cap">(drag to turn it around)</p>
+  <noscript><p>[ rocket - needs JavaScript ]</p></noscript>
 
-<noscript><p>[ rocket — needs JavaScript ]</p></noscript>
+  <p>I go to school in Maine and grew up in New York.</p>
 
-<!-- EDIT THE TEXT BELOW -->
-<p>I go to school in Maine and grew up in New York.</p>
+  <p>I am interested in the macroeconomics of technology, American grand strategy, and emergency medicine.</p>
 
-<p>I am interested in the macroeconomics of technology, American grand strategy, and emergency medicine.<p>
-
-  <p>I am an amateur runner, cyclist, and backcountry skier. I <a href="#reading">read</a> a lot enjoy listening to <a href="#music">music</a>.</p>
+  <p>I am an amateur runner, cyclist, and backcountry skier. I <a href="#reading">read</a> a lot and enjoy listening to <a href="#music">music</a>.</p>
 
   <p>You can read my <a href="https://marblenotebook.substack.com/">writing</a>, follow me on <a href="https://x.com/yourhandle">X</a>, and see my <a href="https://www.linkedin.com/in/yourname">LinkedIn</a>.</p>
 </section>
 
-<!-- ============ WORK (edit me) ============ -->
+<!-- ============ WORK ============ -->
 <section id="work" class="page">
   <h2>Work</h2>
   <p>I am currently writing my thesis on the inflationary impact of AI.</p>
@@ -66,35 +75,35 @@
   <p>Personal writing: <a href="https://marblenotebook.substack.com/">marblenotebook.substack.com</a></p>
 </section>
 
-<!-- ============ READING (edit me) ============ -->
+<!-- ============ READING ============ -->
 <section id="reading" class="page">
   <h2>Reading</h2>
-  <p>I read a lot. Here is what I am reading now and some things I keep coming back to.</p>
+  <p>These are some of the books I find myself returning to.</p>
   <h3>Favorites</h3>
   <ul>
-    <li>Make Your Bed, Little Things that Can Change Your Life and Maybe the World, Admiral William McRaven</li>
-    <li>The Alchemist, Peter Coelho</li>
+    <li>Make Your Bed: Little Things That Can Change Your Life...And Maybe the World, Admiral William McRaven</li>
+    <li>The Alchemist, Paulo Coelho</li>
     <li>Politics, Aristotle</li>
     <li>Strategies of Containment, John Lewis Gaddis</li>
-    <li>The First Tycoon: Cornelius Vanderbilt, TJ Stiles</li>
+    <li>The First Tycoon: The Epic Life of Cornelius Vanderbilt, T.J. Stiles</li>
     <li>Second Treatise of Government, John Locke</li>
-    <li>The Hobbit, JRR Tolkien</li>
+    <li>The Hobbit, J.R.R. Tolkien</li>
     <li>Ottolenghi, Yotam Ottolenghi and Sami Tamimi</li>
-    <li>The Prince, Niccolo Machiavelli</li>
+    <li>The Prince, Niccol&ograve; Machiavelli</li>
     <li>The Giver, Lois Lowry</li>
     <li>The Decadent Society, Ross Douthat</li>
-    <li>The Second Discourse (on Inequality), Jean Jacques Rousseau</li>
+    <li>Discourse on Inequality, Jean-Jacques Rousseau</li>
     <li>Zero to One, Peter Thiel</li>
     <li>1984, George Orwell</li>
-    <li>Spirit of the Laws, Montesquieu</li>
+    <li>The Spirit of the Laws, Montesquieu</li>
     <li>Russian Roulette, Anthony Horowitz</li>
   </ul>
 </section>
-  
-<!-- ============ MUSIC (edit me) ============ -->
+
+<!-- ============ MUSIC ============ -->
 <section id="music" class="page">
   <h2>Music</h2>
-  <p>I really enjoy listening to music and these are some musicians I have been listening to recently.</p>
+  <p>I really enjoy listening to music, and these are some musicians I have been listening to recently.</p>
   <h3>Classical</h3>
   <ul>
     <li>Bach, Cello Suites</li>
@@ -104,22 +113,36 @@
     <li>Mozart</li>
     <li>Schubert</li>
     <li>Beethoven</li>
-    <li>Dvorak</li>
+    <li>Dvo&#345;&aacute;k</li>
     <li>Grieg</li>
     <li>Debussy</li>
     <li>Chopin</li>
     <li>George Gershwin</li>
     <li>Peter Phillips</li>
-  <ul>
+  </ul>
   <h3>Jazz</h3>
   <ul>
     <li>John Coltrane</li>
     <li>Miles Davis</li>
     <li>Duke Ellington</li>
-    <li>Thelonious Monk.</l>
+    <li>Thelonious Monk</li>
   </ul>
 </section>
-  
+
+<script>
+(function(){
+  function route(){
+    var h=(location.hash||'').replace('#','');
+    if(['work','reading','music'].indexOf(h)<0)h='home';
+    document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('on',p.id===h)});
+    document.querySelectorAll('[data-nav]').forEach(function(a){a.classList.toggle('cur',a.dataset.nav===h)});
+    document.title=(h==='home'?'':h.charAt(0).toUpperCase()+h.slice(1)+' - ')+'Your Name';
+    if(h==='home'&&window.__shipResize)window.__shipResize();
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route);route();
+})();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
@@ -224,9 +247,12 @@
   function up(){dragging=false;host.classList.remove('drag')}
   host.addEventListener('pointerup',up);host.addEventListener('pointercancel',up);
 
+  window.__shipResize=resize;
+
   var last=performance.now(),t0=last;
   function frame(now){
-    var dt=Math.min((now-last)/1000,.05);last=now;var t=(now-t0)/1000;idle+=dt;
+    var dt=Math.min((now-last)/1000,.05);last=now;
+    if(!host.offsetParent){requestAnimationFrame(frame);return;}var t=(now-t0)/1000;idle+=dt;
     if(!dragging){
       yaw+=vYaw;vYaw*=.94;vPitch*=.9;pitch+=vPitch;pitch+=(BASEP-pitch)*.02;
       if(idle>1.5&&!reduce)vYaw+=(.006-vYaw)*.03;
